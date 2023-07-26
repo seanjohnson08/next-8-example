@@ -1,9 +1,9 @@
 import React from 'react';
 import { FilterItem } from './components/filter-item';
-import "./index.scss";
+import styles from './index.module.scss';
 
 export const Filters = ({ filterActive }) => (
-  <ul className="filters">
+  <ul className={styles["filters"]}>
     <FilterItem
       to="/"
       selected={(filterActive === 'all')}
