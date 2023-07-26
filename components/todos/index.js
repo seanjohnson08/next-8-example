@@ -2,7 +2,7 @@ import React  from 'react';
 import { Header } from './components/header';
 import { Main } from './components/main';
 import { Footer } from './components/footer';
-import "./index.scss";
+import styles from './index.module.scss';
 
 export const Todos = ({
   filterActive = "all",
@@ -50,7 +50,7 @@ export const Todos = ({
   });
 
   return (
-    <section className="todoapp">
+    <section className={styles["todoapp"]}>
       <Header addTodo={addTodo} />
       <Main
         data={filteredTodos}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoList } from './components/todo-list';
 import { ToggleAll } from './components/toggle-all';
-import "./index.scss";
+import styles from './index.module.scss';
 
 export const Main = ({
   data = [],
@@ -10,7 +10,7 @@ export const Main = ({
   toggleCompleted,
   toggleAll
 }) => (
-  <section className="main">
+  <section className={styles["main"]}>
     <ToggleAll
       toggleAll={toggleAll}
     />

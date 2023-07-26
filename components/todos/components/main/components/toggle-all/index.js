@@ -1,11 +1,11 @@
 import React from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
 export const ToggleAll = ({ toggleAll }) => (
   <div>
     <input
       id="toggle-all"
-      className="toggle-all"
+      className={styles["toggle-all"]}
       type="checkbox"
       onChange={(e) => toggleAll(e.target.checked)}
     />
