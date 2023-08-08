@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
 const ENTER_KEY = 13;
 const ESCAPE_KEY = 27;
@@ -46,28 +46,28 @@ export const Todo = ({
         completed ? "todo_completed" : null,
       ].join(' ')}
     >
-      <div className="todo__view">
+      <div className={styles["todo__view"]}>
         <input
-          className="todo__toggle"
+          className={styles["todo__toggle"]}
           type="checkbox"
           checked={completed}
           onChange={handleToggle}
         />
         <label
-          className="todo__label"
+          className={styles["todo__label"]}
           onDoubleClick={activateEdit}
         >
           {children}
         </label>
         <button
-          className="todo__destroy"
+          className={styles["todo__destroy"]}
           onClick={handleRemove}
         />
       </div>
       <input
         ref={inputRef}
         type="text"
-        className="todo__edit"
+        className={styles["todo__edit"]}
         defaultValue={children}
         onBlur={handleSubmit}
         onKeyDown={handleKeyDown}

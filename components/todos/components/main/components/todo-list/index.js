@@ -1,6 +1,6 @@
 import React from 'react';
 import { Todo } from './components/todo';
-import './index.scss';
+import styles from './index.module.scss';
 
 export const TodoList = ({
   data = [],
@@ -8,7 +8,7 @@ export const TodoList = ({
   removeTodo,
   toggleCompleted
 }) => (
-  <ul className="todo-list">
+  <ul className={styles["todo-list"]}>
     {data.map((item) => (
       <Todo
         key={item.id}
