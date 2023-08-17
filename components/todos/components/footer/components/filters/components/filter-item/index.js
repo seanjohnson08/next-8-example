@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import "./index.scss";
+import styles from './index.module.scss';
 
 export const FilterItem = ({
   selected,
   children,
   to
 }) => (
-  <li className="filter-item">
-    <Link href={to}>
-      <a className={selected ? 'selected' : ''}>{children}</a>
+  <li className={styles["filter-item"]}>
+    <Link href={to} className={selected ? 'selected' : ''}>
+      {children}
     </Link>
   </li>
 );

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './index.scss';
+import styles from './index.module.scss';
 
 const ENTER_KEY = 13;
 
@@ -18,7 +18,7 @@ export const Header = ({ addTodo }) => {
   };
 
   return (
-    <header className="header">
+    <header className={styles["header"]}>
       <h1>todos</h1>
       <input
         ref={inputRef}
